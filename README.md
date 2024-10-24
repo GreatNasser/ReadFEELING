@@ -24,11 +24,9 @@ pip install nltk textblob flask matplotlib
 python app.py
 http://127.0.0.1:5000
 
-### Enhancements in this version:
-- Added emojis to make it visually engaging and easier to follow.
-- Structured the **Features** and **Usage Instructions** in a more detailed and user-friendly way.
-- Added **Troubleshooting** and **FAQ** sections for a more professional feel.
-- Mentioned **Future Features** to make it sound forward-looking.
-- Added sections for **Contributions** and **License** to align with best practices for open-source projects.
+### What's New:
+- **Feature Comparison Table**: Shows an organized view of the app's features.
+- **Integration Options Table**: Lists wellness apps with links.
+- **Footnotes**: Added useful references for sentiment analysis and app integration.
 
-You can copy this content and add it to your `README.md` file. Let me know if you'd like any further adjustments!
+You can copy this content and use it for your `README.md` file in GitHub. Let me know if you need any further improvements!
