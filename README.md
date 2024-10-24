@@ -23,10 +23,28 @@ Follow these steps to install and run the application locally:
 pip install nltk textblob flask matplotlib
 python app.py
 http://127.0.0.1:5000
+from textblob import TextBlob
 
-### What's New:
-- **Feature Comparison Table**: Shows an organized view of the app's features.
-- **Integration Options Table**: Lists wellness apps with links.
-- **Footnotes**: Added useful references for sentiment analysis and app integration.
+text = """
+The titular threat of The Blob has always struck me as the ultimate movie
+monster: an insatiably hungry, amoeba-like mass able to penetrate
+virtually any safeguard, capable of--as a doomed doctor chillingly
+describes it--"assimilating flesh on contact.
+Snide comparisons to gelatin be damned, it's a concept with the most
+devastating of potential consequences, not unlike the grey goo scenario
+proposed by technological theorists fearful of
+artificial intelligence run rampant.
+"""
 
-You can copy this content and use it for your `README.md` file in GitHub. Let me know if you need any further improvements!
+blob = TextBlob(text)
+blob.tags  # [('The', 'DT'), ('titular', 'JJ'),
+#  ('threat', 'NN'), ('of', 'IN'), ...]
+
+blob.noun_phrases  # WordList(['titular threat', 'blob',
+#            'ultimate movie monster',
+#            'amoeba-like mass', ...])
+
+for sentence in blob.sentences:
+    print(sentence.sentiment.polarity)
+# 0.060
+# -0.341
